@@ -26,7 +26,7 @@ publishImage() {
 echo "Publishing riff kafka provisioner"
 
 publishImage ${slug}
-publishImage ${vesion}
+publishImage ${version}
 if [ ${git_branch} = master ] ; then
   publishImage latest
 fi
