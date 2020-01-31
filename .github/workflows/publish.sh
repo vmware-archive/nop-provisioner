@@ -15,8 +15,8 @@ readonly slug=${version}-${git_timestamp}-${GITHUB_SHA:0:16}
 
 publishImage() {
   local tag=$1
-  local source=ko.local/provisioner-735f690b778af94ebf6fae1b426bbf1d:latest
-  local destination=gcr.io/projectriff/nop-provisioner/provisioner:${tag}
+  local source='ko.local/provisioner-735f690b778af94ebf6fae1b426bbf1d:latest'
+  local destination='gcr.io/projectriff/nop-provisioner/provisioner:'${tag}
 
   docker tag ${source} ${destination}
   docker push ${destination}
